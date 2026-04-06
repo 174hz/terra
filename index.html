@@ -10,174 +10,152 @@
         
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #f3f2ee; 
-            color: #2d2d2d; 
+            background-color: #d6d3d1; /* Muted Stone/Earth - Not White */
+            color: #1a1a1a; 
         }
 
         .terra-card {
-            background: rgba(255, 255, 255, 0.6); 
+            background: rgba(255, 255, 255, 0.15); 
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(200, 190, 180, 0.4); 
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 0, 0, 0.1); 
+            transition: all 0.4s ease;
         }
 
         .terra-card:hover {
-            border-color: #164e63;
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+            border-color: #3f6212; /* Forest Green */
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
         }
 
-        .img-frame {
-            overflow: hidden;
-            border: 8px solid white;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(214, 211, 209, 0.5), rgba(214, 211, 209, 1));
         }
 
-        .accent-green { color: #164e63; }
-        .bg-green { background-color: #164e63; }
-        .accent-border { border-left: 4px solid #164e63; }
+        .accent-green { color: #3f6212; }
+        .bg-green { background-color: #3f6212; }
     </style>
 </head>
-<body class="selection:bg-stone-200 selection:text-stone-900">
+<body class="selection:bg-green-900 selection:text-white">
 
-    <nav class="fixed w-full z-50 bg-[#f3f2ee]/95 backdrop-blur-md border-b border-stone-200 py-5 px-8 flex justify-between items-center">
-        <div class="text-2xl font-extrabold tracking-tighter uppercase text-stone-900">TERRA<span class="accent-green">.</span></div>
-        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-stone-600">
-            <a href="#about" class="hover:text-stone-900 transition">Thesis</a>
-            <a href="#system" class="hover:text-stone-900 transition">The System</a>
-            <a href="#vendors" class="hover:text-stone-900 transition">Vendors</a>
+    <nav class="fixed w-full z-50 bg-[#d6d3d1]/90 backdrop-blur-md border-b border-black/5 py-5 px-8 flex justify-between items-center">
+        <div class="text-2xl font-extrabold tracking-tighter uppercase text-black">TERRA<span class="accent-green">.</span></div>
+        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-black/60">
+            <a href="#about" class="hover:text-black transition">Thesis</a>
+            <a href="#system" class="hover:text-black transition text-black border-b-2 border-black">The System</a>
+            <a href="#vendors" class="hover:text-black transition">Vendors</a>
             <a href="#investors" class="hover:text-green-800 transition text-green-900 font-black">Invest</a>
         </div>
     </nav>
 
     <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6">
         <div class="absolute inset-0 z-0">
-            <img src="http://googleusercontent.com/image_collection/image_retrieval/14494734316446745470_0" alt="Cattle in pasture" class="w-full h-full object-cover opacity-50">
-            <div class="absolute inset-0 bg-gradient-to-b from-[#f3f2ee]/80 via-transparent to-[#f3f2ee]"></div>
+            <img src="https://images.unsplash.com/photo-1544923246-77307dd654ca?q=80&w=2070&auto=format&fit=crop" alt="Cattle" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
         </div>
         
         <div class="relative z-10 max-w-5xl">
-            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tighter leading-none text-stone-900">
-                REPLACING THE <br><span class="italic font-light">INDUSTRIAL</span> SUPERMARKET.
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 tracking-tighter leading-none text-black">
+                DE-INDUSTRIALIZING <br><span class="italic font-light">THE</span> HOME.
             </h1>
-            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-stone-700 font-medium leading-relaxed">
-                A "Purity-First" marketplace for the <span class="text-stone-900 font-bold border-b-2 border-stone-400">Optimizer Class.</span> Verified ancestral nutrition, non-toxic skincare, and home-care.
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 text-black/80 font-medium leading-relaxed">
+                The first marketplace for the <span class="font-bold border-b-2 border-green-800">Optimizer Class.</span> <br>Pure ancestral nutrition, non-toxic skin care, and household sovereignty.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="#vendors" class="bg-green text-white font-bold py-5 px-12 rounded-sm hover:bg-stone-800 transition uppercase text-sm tracking-widest shadow-xl">Join as Vendor</a>
-                <a href="#investors" class="bg-white/50 backdrop-blur-sm border border-stone-400 text-stone-900 font-bold py-5 px-12 rounded-sm hover:bg-stone-100 transition uppercase text-sm tracking-widest">Pitch Deck</a>
+                <a href="#vendors" class="bg-black text-white font-bold py-5 px-12 rounded-sm hover:bg-green-900 transition uppercase text-sm tracking-widest shadow-2xl">Join as Vendor</a>
+                <a href="#investors" class="border-2 border-black text-black font-bold py-5 px-12 rounded-sm hover:bg-black/5 transition uppercase text-sm tracking-widest">Pitch Briefing</a>
             </div>
         </div>
     </section>
 
     <section id="system" class="py-24 px-8 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] accent-green mb-4">The Ecosystem</h2>
-            <h3 class="text-4xl md:text-5xl font-bold text-stone-900 uppercase tracking-tighter">Everything Optimized.</h3>
-        </div>
         <div class="grid md:grid-cols-3 gap-12">
-            <div class="text-center">
-                <div class="img-frame mb-6 aspect-square">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/423480663979861989_0" alt="Grass-fed beef" class="w-full h-full object-cover">
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-6 aspect-[4/5] bg-stone-300">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=2069&auto=format&fit=crop" alt="Beef" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
                 <h4 class="text-xl font-bold uppercase mb-2">Elite Proteins</h4>
-                <p class="text-stone-600 text-sm italic">Grass-finished Bison, Beef, and Wild Venison.</p>
+                <p class="text-black/60 text-sm font-medium uppercase tracking-widest">Grass-Finished / Hormone-Free</p>
             </div>
-            <div class="text-center">
-                <div class="img-frame mb-6 aspect-square">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/3845137956812763448_0" alt="Heritage vegetables" class="w-full h-full object-cover">
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-6 aspect-[4/5] bg-stone-300">
+                    <img src="https://images.unsplash.com/photo-1566385101042-1a000c1267c4?q=80&w=2075&auto=format&fit=crop" alt="Produce" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
-                <h4 class="text-xl font-bold uppercase mb-2">Heritage Produce</h4>
-                <p class="text-stone-600 text-sm italic">Mineral-dense, pesticide-free harvest.</p>
+                <h4 class="text-xl font-bold uppercase mb-2">Nutrient Produce</h4>
+                <p class="text-black/60 text-sm font-medium uppercase tracking-widest">Ancestral Seed / Pesticide-Free</p>
             </div>
-            <div class="text-center">
-                <div class="img-frame mb-6 aspect-square">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/2226483157934435563_0" alt="Tallow skincare" class="w-full h-full object-cover">
+            <div class="group cursor-pointer">
+                <div class="overflow-hidden mb-6 aspect-[4/5] bg-stone-300">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=2070&auto=format&fit=crop" alt="Skin Care" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700">
                 </div>
-                <h4 class="text-xl font-bold uppercase mb-2">Skin Sovereignty</h4>
-                <p class="text-stone-600 text-sm italic">Tallow-based, endocrine-disruptor free care.</p>
+                <h4 class="text-xl font-bold uppercase mb-2">Home Sovereignty</h4>
+                <p class="text-black/60 text-sm font-medium uppercase tracking-widest">Tallow Care / Probiotic Cleaning</p>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-32 px-8 bg-stone-100/50">
+    <section id="about" class="py-32 px-8 bg-stone-900 text-[#d6d3d1]">
         <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
             <div>
-                <h2 class="text-xs font-bold uppercase tracking-[0.4em] accent-green mb-4">The Investment Thesis</h2>
-                <h3 class="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-stone-900 leading-tight">Decentralizing <br>the Supply Chain.</h3>
-                <p class="text-stone-700 text-lg mb-6 leading-relaxed">
-                    Modern retail is a minefield. From inflammatory seed oils to phthalates in detergents, the traditional supermarket is built for shelf-life, not life-span.
+                <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-green-500 mb-4">Investment Thesis</h2>
+                <h3 class="text-4xl md:text-6xl font-bold mb-8 tracking-tighter leading-tight">Infrastructure for <br>Biological Elite.</h3>
+                <p class="text-white/60 text-lg mb-6 leading-relaxed">
+                    The modern supermarket is built for shelf-life, not life-span. TERRA aggregates the top 1% of vendors into a high-trust Operating System.
                 </p>
-                <p class="text-stone-700 text-lg leading-relaxed">
-                    TERRA is the digital displacement of the grocery aisle. We aggregate the top 1% of regenerative farmers and non-toxic artisans into a single, verified Operating System.
-                </p>
+                <div class="flex gap-4">
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-sm">
+                        <span class="text-3xl font-black block">$900B</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-50">Market TAM</span>
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-sm">
+                        <span class="text-3xl font-black block">300%</span>
+                        <span class="text-[10px] uppercase tracking-widest opacity-50">Demand Growth</span>
+                    </div>
+                </div>
             </div>
-            <div class="grid grid-cols-2 gap-6">
-                <div class="terra-card p-10 rounded-sm text-center">
-                    <div class="text-4xl font-bold mb-1 text-stone-900">300%</div>
-                    <div class="text-[10px] uppercase tracking-widest text-stone-500 font-black">Carnivore Growth</div>
-                </div>
-                <div class="terra-card p-10 rounded-sm text-center">
-                    <div class="text-4xl font-bold mb-1 text-stone-900">$900B</div>
-                    <div class="text-[10px] uppercase tracking-widest text-stone-500 font-black">U.S. Grocery TAM</div>
-                </div>
-                <div class="terra-card p-10 rounded-sm text-center">
-                    <div class="text-4xl font-bold mb-1 text-stone-900">0%</div>
-                    <div class="text-[10px] uppercase tracking-widest text-stone-500 font-black">Seed Oil Tolerance</div>
-                </div>
-                <div class="terra-card p-10 rounded-sm text-center">
-                    <div class="text-4xl font-bold mb-1 text-stone-900">15%</div>
-                    <div class="text-[10px] uppercase tracking-widest text-stone-500 font-black">Marketplace Fee</div>
-                </div>
+            <div class="relative">
+                 <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2070&auto=format&fit=crop" class="w-full h-96 object-cover rounded-sm grayscale shadow-2xl">
+                 <div class="absolute -bottom-6 -left-6 bg-green-800 p-8 text-white font-black text-xl italic uppercase">
+                    From the Earth. <br>To the Cell.
+                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-40 bg-stone-900 text-white relative overflow-hidden">
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/14494734316446745470_3" alt="Pasture close up" class="absolute inset-0 w-full h-full object-cover opacity-20">
-        <div class="max-w-4xl mx-auto px-8 text-center relative z-10">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-stone-400 mb-8">Our Mission</h2>
-            <blockquote class="text-3xl md:text-5xl font-serif italic leading-tight">
-                "To return humanity to ancestral sovereignty by providing a verifiable path back to the earth—detoxing the home and refueling the body with pure, nutrient-dense biology."
-            </blockquote>
-        </div>
-    </section>
-
-    <section id="vendors" class="py-32 px-8 max-w-7xl mx-auto">
+    <section id="vendors" class="py-32 px-8 max-w-7xl mx-auto bg-[#d6d3d1]">
         <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-6xl font-extrabold tracking-tighter text-stone-900 uppercase">Vendor Partnership</h2>
-            <p class="text-stone-600 mt-4 font-medium text-lg">Direct access to the price-insensitive Optimizer demographic.</p>
+            <h2 class="text-4xl md:text-7xl font-black tracking-tighter text-black uppercase">Vendor Partnership</h2>
+            <p class="text-black/60 mt-4 font-bold text-lg">Bypass the Industrial Middleman.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-10">
-            <div class="terra-card p-10 rounded-sm accent-border">
-                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight text-stone-900">25%+ Margins</h4>
-                <p class="text-stone-600 text-sm leading-relaxed">Stop selling to wholesalers. TERRA consumers pay for verified purity, allowing you to capture the full value of your labor.</p>
+            <div class="terra-card p-10 rounded-sm border-2 border-black/10">
+                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight">Elite Margins</h4>
+                <p class="text-black/70 text-sm leading-relaxed">Our demographic prioritizes purity over price. Capture the 25% "Ancestral Premium" directly.</p>
             </div>
-            <div class="terra-card p-10 rounded-sm accent-border">
-                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight text-stone-900">Verified Proof</h4>
-                <p class="text-stone-600 text-sm leading-relaxed">Our "Purity Ledger" translates your soil data and farming techniques into trust that consumers can see and verify.</p>
+            <div class="terra-card p-10 rounded-sm border-2 border-black/10">
+                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight">Purity Audit</h4>
+                <p class="text-black/70 text-sm leading-relaxed">We provide the technical proof. Use our "Verification Ledger" to prove your land's health.</p>
             </div>
-            <div class="terra-card p-10 rounded-sm accent-border">
-                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight text-stone-900">Cold-Chain Tech</h4>
-                <p class="text-stone-600 text-sm leading-relaxed">Access our seamless logistics network. We handle the friction of shipping fresh meats and raw goods across the country.</p>
+            <div class="terra-card p-10 rounded-sm border-2 border-black/10">
+                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight">Cold-Chain Tech</h4>
+                <p class="text-black/70 text-sm leading-relaxed">Seamless logistics for raw goods. We bridge the gap from your land to the city center.</p>
             </div>
         </div>
     </section>
 
-    <section id="investors" class="py-32 px-8 border-t border-stone-200 bg-stone-50">
-        <div class="max-w-3xl mx-auto terra-card p-12 rounded-sm text-center shadow-2xl">
-            <h2 class="text-3xl font-bold mb-4 tracking-tight text-stone-900">INVESTOR RELATIONS</h2>
-            <p class="text-stone-700 mb-8 font-medium italic text-lg">Seeking $5.0M USD Seed. Join the total system displacement of the industrial supermarket aisle.</p>
-            <form action="#" class="flex flex-col gap-4">
-                <input type="email" placeholder="Institutional Email" class="bg-white border border-stone-300 p-5 rounded-sm text-center focus:outline-none focus:border-green-800 transition font-bold uppercase tracking-widest text-xs">
-                <button class="bg-stone-900 text-white font-bold py-5 px-10 rounded-sm hover:bg-green-900 transition uppercase text-xs tracking-widest shadow-md">Request Institutional Briefing</button>
+    <section id="investors" class="py-32 px-8 bg-stone-200">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-black mb-4 uppercase">Institutional Briefing</h2>
+            <p class="text-black/60 mb-8 font-medium italic">Seeking $5.0M USD Seed. Join the disruption.</p>
+            <form action="#" class="flex flex-col md:flex-row gap-2">
+                <input type="email" placeholder="Institutional Email" class="flex-grow bg-white border-2 border-black p-5 rounded-sm font-bold text-xs uppercase tracking-widest">
+                <button class="bg-black text-white font-bold py-5 px-10 rounded-sm hover:bg-green-900 transition uppercase text-xs tracking-widest">Request Deck</button>
             </form>
         </div>
     </section>
 
-    <footer class="py-20 px-8 border-t border-stone-200 text-center bg-stone-100">
-        <div class="text-xl font-black tracking-tighter text-stone-900 uppercase mb-4">TERRA<span class="accent-green">.</span></div>
-        <p class="text-stone-500 text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 TERRA TECHNOLOGIES. Ancestral Wisdom. Modern Infrastructure.</p>
+    <footer class="py-20 px-8 border-t border-black/10 text-center">
+        <div class="text-xl font-black tracking-tighter text-black uppercase mb-4">TERRA<span class="accent-green">.</span></div>
+        <p class="text-black/40 text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 TERRA TECHNOLOGIES. DE-INDUSTRIALIZING THE WORLD.</p>
     </footer>
 
 </body>
