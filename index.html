@@ -10,57 +10,64 @@
         
         body { 
             font-family: 'Plus Jakarta Sans', sans-serif; 
-            background-color: #0a0a0a; 
-            color: #e5e7eb;
+            background-color: #f8fafc; /* Bright Off-White Background */
+            color: #1e293b; /* Dark Slate Text */
         }
 
+        /* Gradient for bright mode */
         .gradient-text {
-            background: linear-gradient(90deg, #d1d5db, #6b7280);
+            background: linear-gradient(90deg, #1e293b, #64748b);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
+        /* Bright Glassmorphism Card Style */
         .terra-card {
-            background: rgba(23, 23, 23, 0.8);
+            background: rgba(255, 255, 255, 0.7); /* Frosted White */
             backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(226, 232, 240, 0.6); /* Subtle slate border */
             transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
 
         .terra-card:hover {
-            border-color: rgba(255, 255, 255, 0.3);
+            border-color: rgba(59, 130, 246, 0.3); /* Blue subtle glow on hover */
             transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
         }
 
         .accent-border {
-            border-left: 4px solid #3b82f6;
+            border-left: 4px solid #2563eb; /* Strong blue accent */
         }
     </style>
 </head>
-<body class="selection:bg-blue-500 selection:text-white">
+<body class="selection:bg-blue-100 selection:text-blue-900">
 
-    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 py-4 px-8 flex justify-between items-center">
-        <div class="text-2xl font-extrabold tracking-tighter uppercase">TERRA<span class="text-blue-500">.</span></div>
-        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
-            <a href="#about" class="hover:text-white transition">About</a>
-            <a href="#mission" class="hover:text-white transition">Mission</a>
-            <a href="#vendors" class="hover:text-white transition">Vendors</a>
-            <a href="#investors" class="hover:text-white transition text-blue-400">Investor Portal</a>
+    <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 py-4 px-8 flex justify-between items-center">
+        <div class="text-2xl font-extrabold tracking-tighter uppercase text-slate-950">TERRA<span class="text-blue-600">.</span></div>
+        <div class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-slate-600">
+            <a href="#about" class="hover:text-blue-600 transition">About</a>
+            <a href="#mission" class="hover:text-blue-600 transition">Mission</a>
+            <a href="#vendors" class="hover:text-blue-600 transition">Vendors</a>
+            <a href="#investors" class="hover:text-blue-700 transition text-blue-600">Investor Portal</a>
         </div>
     </nav>
 
     <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80')] bg-cover bg-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-slate-50/80 to-transparent"></div>
+        </div>
+        
         <div class="relative z-10 max-w-5xl">
             <h1 class="text-5xl md:text-8xl font-extrabold mb-6 tracking-tighter leading-none gradient-text">
                 REPLACING THE <br>INDUSTRIAL SUPERMARKET.
             </h1>
-            <p class="text-lg md:text-2xl max-w-3xl mx-auto mb-10 text-gray-400 font-light leading-relaxed">
-                The first decentralized "Purity-First" marketplace for the <span class="text-white font-bold underline decoration-blue-500">Optimizer Class.</span> Verified ancestral nutrition, non-toxic skincare, and probiotic home-care.
+            <p class="text-lg md:text-2xl max-w-3xl mx-auto mb-10 text-slate-700 font-medium leading-relaxed">
+                The first decentralized "Purity-First" marketplace for the <span class="text-slate-950 font-bold underline decoration-blue-300 decoration-2">Optimizer Class.</span> Verified ancestral nutrition, non-toxic skincare, and probiotic home-care.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="#vendors" class="bg-white text-black font-bold py-4 px-10 rounded-full hover:bg-gray-200 transition uppercase text-sm tracking-widest">Join as Vendor</a>
-                <a href="#investors" class="border border-white/20 font-bold py-4 px-10 rounded-full hover:bg-white/5 transition uppercase text-sm tracking-widest">View Thesis</a>
+                <a href="#vendors" class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-700 transition uppercase text-sm tracking-widest shadow-lg shadow-blue-200">Join as Vendor</a>
+                <a href="#investors" class="bg-white/70 backdrop-blur-sm border border-slate-200 font-bold py-4 px-10 rounded-full hover:bg-white transition uppercase text-sm tracking-widest text-slate-900 shadow-sm">View Thesis</a>
             </div>
         </div>
     </section>
@@ -68,40 +75,40 @@
     <section id="about" class="py-32 px-8 max-w-7xl mx-auto">
         <div class="grid md:grid-cols-2 gap-20 items-center">
             <div>
-                <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-blue-500 mb-4">About Terra</h2>
-                <h3 class="text-4xl md:text-5xl font-bold mb-8 tracking-tight">Infrastructure for the Biological Elite.</h3>
-                <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-blue-600 mb-4">About Terra</h2>
+                <h3 class="text-4xl md:text-5xl font-bold mb-8 tracking-tight text-slate-950">Infrastructure for the Biological Elite.</h3>
+                <p class="text-slate-700 text-lg mb-6 leading-relaxed">
                     Modern retail is a minefield of endocrine disruptors and inflammatory seed oils. TERRA is the digital displacement of the grocery aisle. 
                 </p>
-                <p class="text-gray-400 text-lg leading-relaxed">
+                <p class="text-slate-700 text-lg leading-relaxed">
                     We aggregate the top 1% of regenerative farmers and non-toxic artisans into a single, high-trust Operating System. From grass-finished bison to tallow-based skincare, we own the supply chain for human longevity.
                 </p>
             </div>
             <div class="grid grid-cols-2 gap-4">
                 <div class="terra-card p-8 rounded-2xl text-center">
-                    <div class="text-3xl font-bold mb-2">300%</div>
-                    <div class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Carnivore Search Growth</div>
+                    <div class="text-3xl font-bold mb-2 text-blue-600">300%</div>
+                    <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Carnivore Search Growth</div>
                 </div>
                 <div class="terra-card p-8 rounded-2xl text-center">
-                    <div class="text-3xl font-bold mb-2">$900B</div>
-                    <div class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">U.S. Grocery TAM</div>
+                    <div class="text-3xl font-bold mb-2 text-slate-950">$900B</div>
+                    <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">U.S. Grocery TAM</div>
                 </div>
                 <div class="terra-card p-8 rounded-2xl text-center">
-                    <div class="text-3xl font-bold mb-2">0%</div>
-                    <div class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Seed Oil Tolerance</div>
+                    <div class="text-3xl font-bold mb-2 text-blue-600">0%</div>
+                    <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Seed Oil Tolerance</div>
                 </div>
                 <div class="terra-card p-8 rounded-2xl text-center">
-                    <div class="text-3xl font-bold mb-2">15%</div>
-                    <div class="text-[10px] uppercase tracking-widest text-gray-500 font-bold">Marketplace Fee</div>
+                    <div class="text-3xl font-bold mb-2 text-slate-950">15%</div>
+                    <div class="text-[10px] uppercase tracking-widest text-slate-500 font-bold">Marketplace Fee</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="mission" class="py-32 bg-white/5">
+    <section id="mission" class="py-32 bg-blue-50 border-y border-blue-100">
         <div class="max-w-4xl mx-auto px-8 text-center">
-            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-blue-500 mb-6">Our Mission</h2>
-            <blockquote class="text-3xl md:text-5xl font-light italic leading-tight text-gray-200">
+            <h2 class="text-xs font-bold uppercase tracking-[0.4em] text-blue-700 mb-6">Our Mission</h2>
+            <blockquote class="text-3xl md:text-5xl font-light italic leading-tight text-slate-900">
                 "To return humanity to ancestral sovereignty by providing a verifiable path back to the earth—detoxing the home and refueling the body with pure, nutrient-dense biology."
             </blockquote>
         </div>
@@ -109,39 +116,39 @@
 
     <section id="vendors" class="py-32 px-8 max-w-7xl mx-auto">
         <div class="text-center mb-20">
-            <h2 class="text-4xl md:text-6xl font-bold tracking-tighter">WHY JOIN THE TERRA NETWORK?</h2>
-            <p class="text-gray-400 mt-4 font-medium">Bypass the wholesalers. Capture the Ancestral Premium.</p>
+            <h2 class="text-4xl md:text-6xl font-bold tracking-tighter text-slate-950">WHY JOIN THE TERRA NETWORK?</h2>
+            <p class="text-slate-700 mt-4 font-semibold text-lg">Bypass the wholesalers. Capture the Ancestral Premium.</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
             <div class="terra-card p-10 rounded-3xl accent-border">
-                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight text-white">Elite Margins</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Our customers prioritize nutrient density over price. Sell your grass-finished meats and non-toxic goods at 25-30% higher margins than industrial wholesale.</p>
+                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-950">Elite Margins</h4>
+                <p class="text-slate-600 text-sm leading-relaxed">Our customers prioritize nutrient density over price. Sell your grass-finished meats and non-toxic goods at 25-30% higher margins than industrial wholesale.</p>
             </div>
             <div class="terra-card p-10 rounded-3xl accent-border">
-                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight text-white">Verification SaaS</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">We provide the technical proof. Use our soil-auditing and lab-testing integration to prove your purity and build bulletproof brand equity.</p>
+                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-950">Verification SaaS</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">We provide the technical proof. Use our soil-auditing and lab-testing integration to prove your purity and build bulletproof brand equity.</p>
             </div>
             <div class="terra-card p-10 rounded-3xl accent-border">
-                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight text-white">Direct Logistics</h4>
-                <p class="text-gray-500 text-sm leading-relaxed">Access our integrated cold-chain shipping network. We handle the complexity of getting high-ticket raw goods from your land to their door.</p>
+                <h4 class="text-xl font-bold mb-4 uppercase tracking-tight text-slate-950">Direct Logistics</h4>
+                <p class="text-gray-600 text-sm leading-relaxed">Access our integrated cold-chain shipping network. We handle the complexity of getting high-ticket raw goods from your land to their door.</p>
             </div>
         </div>
     </section>
 
-    <section id="investors" class="py-32 px-8 border-t border-white/10 bg-black">
-        <div class="max-w-3xl mx-auto terra-card p-12 rounded-3xl text-center shadow-2xl shadow-blue-900/20">
-            <h2 class="text-3xl font-bold mb-6 tracking-tight">Investor Relations</h2>
-            <p class="text-gray-400 mb-8 font-medium italic">Current Raising: $5.0M USD Seed Round. Access the data-driven thesis for the total displacement of the industrial supermarket.</p>
+    <section id="investors" class="py-32 px-8 border-t border-slate-100 bg-white">
+        <div class="max-w-3xl mx-auto terra-card p-12 rounded-3xl text-center shadow-xl shadow-slate-100">
+            <h2 class="text-3xl font-bold mb-6 tracking-tight text-slate-950">Investor Relations</h2>
+            <p class="text-slate-700 mb-8 font-semibold italic text-lg">Current Raising: $5.0M USD Seed Round. Access the data-driven thesis for the total displacement of the industrial supermarket.</p>
             <form action="#" class="flex flex-col gap-4">
-                <input type="email" placeholder="Institutional Email" class="bg-white/5 border border-white/10 p-4 rounded-full text-center focus:outline-none focus:border-blue-500 transition">
-                <button class="bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-500 transition uppercase text-xs tracking-widest">Request Full Deck</button>
+                <input type="email" placeholder="Institutional Email" class="bg-slate-50 border border-slate-200 p-4 rounded-full text-center focus:outline-none focus:border-blue-500 transition font-medium text-slate-900">
+                <button class="bg-slate-900 text-white font-bold py-4 px-10 rounded-full hover:bg-black transition uppercase text-xs tracking-widest shadow-md">Request Full Deck</button>
             </form>
         </div>
     </section>
 
-    <footer class="py-20 px-8 border-t border-white/5 text-center">
-        <div class="text-xl font-black tracking-tighter text-white uppercase mb-4">TERRA<span class="text-blue-500">.</span></div>
-        <p class="text-gray-600 text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 TERRA TECHNOLOGIES. Ancestral Wisdom. Modern Infrastructure.</p>
+    <footer class="py-20 px-8 border-t border-slate-100 text-center bg-slate-50">
+        <div class="text-xl font-black tracking-tighter text-slate-950 uppercase mb-4">TERRA<span class="text-blue-600">.</span></div>
+        <p class="text-slate-500 text-[10px] uppercase tracking-[0.3em] font-bold">© 2026 TERRA TECHNOLOGIES. Ancestral Wisdom. Modern Infrastructure.</p>
     </footer>
 
 </body>
